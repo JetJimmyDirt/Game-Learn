@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var pause_menu: CanvasLayer = $"."
-
+@onready var main_menu_button: Button = $ColorRect/MainMenuButton
 @onready var resume_buttom: Button = $ColorRect/ResumeButtom
 
 
@@ -19,3 +19,8 @@ func _process(delta: float) -> void:
 func _on_resume_buttom_pressed() -> void:
 	hide()
 	get_tree().paused = false
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
