@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dh4wxxyeegatf"]
+
+[ext_resource type="FontFile" uid="uid://c4p4khd1f4def" path="res://assets/fonts/OptimusPrincepsSemiBold.ttf" id="2_mqh5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ns25"]
+bg_color = Color(0, 0, 0, 0.3254902)
+
+[node name="DeathScreen" type="CanvasLayer" unique_id=1868660233]
+visible = false
+
+[node name="DeathMessage" type="Label" parent="." unique_id=1519496945]
+offset_top = 223.0
+offset_right = 1152.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(0.8290163, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mqh5l")
+theme_override_font_sizes/font_size = 56
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ns25")
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dy5qd3yhxrvt1"]
+
+[ext_resource type="Script" uid="uid://drikcleah36t" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://col4yasf6ssw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_myx47"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kukqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5d2l8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l7mv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4r4p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1s2dm"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1912084965]
+visible = false
+script = ExtResource("1_myx47")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=514049241]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 245.0
+offset_top = 101.0
+offset_right = -230.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.50980395, 0.50980395, 0.50980395, 0.31764707)
+
+[node name="ResumeButtom" type="Button" parent="ColorRect" unique_id=2007327861]
+top_level = true
+layout_mode = 0
+offset_left = 207.0
+offset_top = 50.0
+offset_right = 471.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("2_myx47")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kukqi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5d2l8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7l7mv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v4r4p")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1s2dm")
+text = "Resume"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="pressed" from="ColorRect/ResumeButtom" to="." method="_on_resume_buttom_pressed"]

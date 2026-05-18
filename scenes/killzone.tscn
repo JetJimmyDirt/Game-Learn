@@ -1,13 +1,16 @@
 [gd_scene format=3 uid="uid://dqdjncel3sp0e"]
 
 [ext_resource type="Script" uid="uid://ch5kjfqvdi5it" path="res://scripts/killzone.gd" id="1_xlapc"]
+[ext_resource type="PackedScene" uid="uid://dh4wxxyeegatf" path="res://scenes/death_screen.tscn" id="2_kl8fp"]
 
 [node name="Killzone" type="Area2D" unique_id=550673061]
 collision_mask = 2
 script = ExtResource("1_xlapc")
 
+[node name="DeathScreen" parent="." unique_id=1868660233 instance=ExtResource("2_kl8fp")]
+
 [node name="Timer" type="Timer" parent="." unique_id=268536947]
-wait_time = 0.6
+wait_time = 1.5
 one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
